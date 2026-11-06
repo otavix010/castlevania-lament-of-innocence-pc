@@ -2,7 +2,7 @@
 
 > **Projeto de fãs, sem fins lucrativos.** *Castlevania* é marca registrada da Konami; este projeto não tem relação com a Konami. Este repositório **não contém o jogo**: você vai precisar da **sua própria cópia** do DVD (a versão americana, **SLUS-20733**).
 
-Port nativo para PC por **recompilação estática** com o [PS2Recomp](https://github.com/ran-j/PS2Recomp), no mesmo esquema dos outros ports de PlayStation 2 do Otavix: o seu PC gera e compila o jogo a partir da sua ISO.
+Port nativo para PC por **recompilação estática** com o motor PS2 próprio do projeto, no mesmo esquema dos outros ports de PlayStation 2 do Otavix: o seu PC gera e compila o jogo a partir da sua ISO.
 
 ## Estado atual: em desenvolvimento
 
@@ -16,9 +16,9 @@ Port nativo para PC por **recompilação estática** com o [PS2Recomp](https://g
 ## Licença e créditos
 
 - **O nosso código**: [MIT](LICENSE).
-- **PS2Recomp**: [GPLv3](https://github.com/ran-j/PS2Recomp/blob/main/LICENSE), de ran-j e colaboradores.
+- **O motor do port** (o motor PS2 próprio do projeto, que o gerador vai baixar pronto) não é coberto pela licença MIT; os avisos de terceiros dele ficam no `TERCEIROS.txt` do pacote.
 - *Castlevania* é marca registrada da Konami. Este é um projeto de fãs, sem fins lucrativos, sem relação com a Konami nem endossado por ela.
 
 ## English summary
 
-A **native PC port** of *Castlevania: Lament of Innocence* (PlayStation 2, 2003) by **static recompilation** with [PS2Recomp](https://github.com/ran-j/PS2Recomp). **Work in progress: the port has not started yet** — we are first strengthening the shared PS2 base with the first four games. You will need your own copy of the **American** release (SLUS-20733, Redump "Castlevania - Lament of Innocence (USA)") as an .iso. *Castlevania* is a trademark of Konami; this is a non-commercial fan project, not affiliated with or endorsed by Konami.
+A **native PC port** of *Castlevania: Lament of Innocence* (PlayStation 2, 2003) by **static recompilation** with the project's own PS2 engine. **Work in progress: the port has not started yet** — we are first strengthening the shared PS2 base with the first four games. You will need your own copy of the **American** release (SLUS-20733, Redump "Castlevania - Lament of Innocence (USA)") as an .iso. *Castlevania* is a trademark of Konami; this is a non-commercial fan project, not affiliated with or endorsed by Konami.

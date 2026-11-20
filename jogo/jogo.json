@@ -1,0 +1,25 @@
+{
+    "nome": "Castlevania: Lament of Innocence",
+    "serial": "SLUS-20733",
+    "elf": "SLUS_207.33",
+    "cd_root": "",
+    "exe": "castlevania-lament-of-innocence.exe",
+    "icone_capa": "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Castlevania%20-%20Lament%20of%20Innocence%20%28USA%29.png",
+    "iso_sha1": [
+        "2cdf5a7bf469c2426d6cbd59967351bae367f225"
+    ],
+    "elf_sha1": [
+        "317b2271be7f24842c4b357c70599219389c004d"
+    ],
+    "versao": "americana, SLUS-20733",
+    "ambiente": {
+        "PS2X_VU1_NATIVO": "1",
+        "PS2X_GS_THREAD": "1",
+        "PS2X_MTVU": "1",
+        "PS2X_GS_FILA": "65536",
+        "PS2X_MTVU_FILA": "2048",
+        "PS2X_GS_THREADS": "4",
+        "PS2X_GS_GIRO": "0",
+        "PS2X_RELOGIO_REAL": "1"
+    }
+}

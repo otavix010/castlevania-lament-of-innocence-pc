@@ -68,6 +68,15 @@ O teclado e o mouse funcionam junto com o controle. As teclas são trocadas na p
 
 O ponteiro do mouse só fica preso na janela depois da primeira tecla do jogo; Alt+Tab solta. F10 (medidor de desempenho), F11 e Alt+Enter (tela cheia) continuam sendo atalhos do port. Sem o launcher: `PS2X_TECLADO=0|1`, `PS2X_MOUSE=0|1`, `PS2X_MOUSE_SENS=5..200` e `PS2X_TECLAS="cross=space;square=mouse1 j;lstick_up=w"` (botão=teclas, separados por `;`).
 
+## Salvar e carregar o estado (save state)
+
+Além do save do próprio jogo (cartão de memória), dá para salvar o momento exato e voltar a ele, como nos emuladores, em 9 espaços:
+
+- **Teclado:** F5 salva, F8 carrega, F6 e F7 trocam o espaço.
+- **Controle:** segure **Select** e aperte **RB** para salvar, **LB** para carregar, e esquerda/direita no direcional para trocar o espaço. O Select usado nessas combinações não chega ao jogo; sozinho, ele funciona normalmente.
+
+Um aviso curto na tela confirma ("Estado salvo no espaço 3"). Não dá para salvar durante um vídeo; o aviso diz quando. Os estados ficam em `estados\` na pasta do port e valem só para a mesma versão do port: depois de uma atualização, os estados antigos são recusados (os saves do cartão continuam valendo). Carregar um estado não volta o cartão de memória no tempo. Desligar: na página **Controles** do launcher, ou `PS2X_ESTADOS=0`.
+
 ## Plataformas
 
 | | **Windows** | **Linux / SteamOS** |
@@ -149,18 +158,22 @@ Depois de atualizar o port, `gerar.cmd -RefazerDe 3` baixa o motor novo, retradu
 
 ## Licença e créditos
 
-- **O nosso código** (`gerar.ps1`, `gerar.cmd`): [MIT](LICENSE).
+- **O nosso código** (`gerar.ps1`, `gerar.cmd`): [MIT](LICENSE); os avisos do motor e de marcas estão em [AVISOS.md](AVISOS.md).
 - **O motor do port** (pacote `otx-motor-ps2`, baixado pronto pelo gerador) não é coberto pela licença MIT; os avisos de terceiros dele (raylib e glfw: zlib; FFmpeg: LGPL, DLLs à parte) estão no `TERCEIROS.txt` do pacote.
 - O NIS vem do [NVIDIA Image Scaling SDK](https://github.com/NVIDIAGameWorks/NVIDIAImageScaling) (MIT) e o FSR 1 do [AMD FidelityFX FSR](https://github.com/GPUOpen-Effects/FidelityFX-FSR) (MIT).
 - O ícone vem da capa do jogo no [libretro-thumbnails](https://github.com/libretro-thumbnails/Sony_-_PlayStation_2).
 - *Castlevania* é marca registrada da Konami. Este é um projeto de fãs, sem fins lucrativos, sem relação com a Konami nem endossado por ela.
 
+**Como é feito:** o Otavix é um projeto de fãs, sem fins lucrativos, desenvolvido com a ajuda de assistentes de IA (Claude, da Anthropic), que escrevem e testam boa parte do código sob a direção do autor. Cada versão passa por testes antes de ser publicada, e os reports dos jogadores entram no mesmo ciclo.
+
 ## English summary
 
-A **native PC port** of *Castlevania: Lament of Innocence* (PlayStation 2, 2003) made by **static recompilation** with the project's own PS2 engine. **Beta, first release.** It runs from the start (intro, videos, menus and gameplay) at **60 FPS on a current PC**; it has not been played to the end in the port yet. The console's graphics chip (GS) runs on your GPU (OpenGL 4.3). Options in the launcher: window or fullscreen (F11 / Alt+Enter), window size, internal resolution (1x, 2x or 4x), upscaler (bilinear, AMD FSR 1, NVIDIA Image Scaling) and sharpness, FXAA. The picture stays 4:3 (no widescreen or 30 FPS mode yet). Keyboard and mouse work alongside the controller.
+A **native PC port** of *Castlevania: Lament of Innocence* (PlayStation 2, 2003) made by **static recompilation** with the project's own PS2 engine. **Beta, first release.** It runs from the start (intro, videos, menus and gameplay) at **60 FPS on a current PC**; it has not been played to the end in the port yet. The console's graphics chip (GS) runs on your GPU (OpenGL 4.3). **Save states** in 9 slots: F5 saves, F8 loads, F6/F7 change the slot (controller: hold Select + RB / LB / D-pad left-right); they work only with the same port version. Options in the launcher: window or fullscreen (F11 / Alt+Enter), window size, internal resolution (1x, 2x or 4x), upscaler (bilinear, AMD FSR 1, NVIDIA Image Scaling) and sharpness, FXAA. The picture stays 4:3 (no widescreen or 30 FPS mode yet). Keyboard and mouse work alongside the controller.
 
 **Platforms:** Windows 10/11 only for now (Linux is not supported yet; only the *God of War: Ascension* port has a Linux beta). **Easiest: the [Otavix Launcher](https://github.com/otavix010/otavix-launcher/releases/latest).**
 
 **Bring your own game**: no game code or data here, only the function map (addresses), translation settings and the VU1 "recipe" (offsets and sizes in your executable). You need the **US** release (SLUS-20733, Redump "Castlevania - Lament of Innocence (USA)") as an **.iso**. Install Visual Studio 2022 Build Tools with C++, CMake and Clang (commands above), download this repository to a path without spaces with about 15 GB free, double-click **`gerar.cmd`** (it checks your ISO, extracts the disc files, downloads the prebuilt engine package (no Git needed), translates the game code on your PC and builds it, in 5 to 30 minutes; 16 GB of RAM needed), then play with **`jogar.cmd`**.
 
 License: our scripts are MIT; the engine package is not covered by it, and its third-party notices are in its `TERCEIROS.txt`. *Castlevania* is a trademark of Konami; this is a non-commercial fan project, not affiliated with or endorsed by Konami.
+
+**How it is made:** Otavix is a non-profit fan project developed with the help of AI assistants (Anthropic's Claude), which write and test much of the code under the author's direction. Every release is tested before it is published, and player reports feed the same loop.
